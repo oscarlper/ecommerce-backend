@@ -109,11 +109,24 @@ class ContenedorFirebase {
 
     async addProdCart(id,objetoCart) {
         try {
-            const res = await this.coleccion.doc(id).set({products:[objetoCart]})
-            return {'result': {'id': res.id}, 'http_res':201}
+            const doc = await this.coleccion.doc(id).get();
+            console.log(doc)
+            if (doc.exists) {
+                const data = doc.data();
+                //return {'result': {...data, id: id},'http_res':201 };
+                data.products.push(objetoCart)
+                try {
+                    const res = await this.coleccion.doc(id).set({products:data.products})
+                    return {'result': {'id': res.id}, 'http_res':201}
+                } catch (error) {
+                    return {'result': {error: 'Error de escritura en db.'},'http_res':404}
+                }
+            } else {
+                return {'result': {error: 'producto no encontrado'},'http_res':404}
+            }
         } catch (error) {
-            return {'result': {error: 'Error de escritura en db'},'http_res':404}
-        }
+            console.log(error)
+        } 
     }
 
     async delProdCart(id,id_prod) {
