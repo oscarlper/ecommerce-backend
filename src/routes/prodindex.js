@@ -11,8 +11,12 @@ let id;
 const productoDao = new daos.ProductoDao
 
 prodRouter.get("/", async (req, res) => {
+try{
     const response = await productoDao.listarAll()
         res.status(response.http_res).json(response.result)
+} catch(e) {
+    console.log(e)
+}
     }
 );
 
@@ -22,7 +26,7 @@ prodRouter.get("/:id", async (req, res) => {
     res.status(response.http_res).json(response.result)
 });
 
-prodRouter.post('/',userAuth , async (req,res) => {
+prodRouter.post('/', userAuth.isAdmin, async (req,res) => {
 
     const { title, price, code, thumbnail, stock } = req.body
     const timestamp = Date.now()
@@ -32,7 +36,7 @@ prodRouter.post('/',userAuth , async (req,res) => {
     res.status(response.http_res).json(response.result)
 })
 
-prodRouter.delete('/:id',userAuth, async(req,res) => {
+prodRouter.delete('/:id', userAuth.isAdmin, async(req,res) => {
     id = req.params.id
     const response = await productoDao.delProd(id)
 
@@ -40,7 +44,7 @@ prodRouter.delete('/:id',userAuth, async(req,res) => {
    
 })
 
-prodRouter.put('/:id',userAuth, async (req,res) => {
+prodRouter.put('/:id', userAuth.isAdmin, async (req,res) => {
     const id = req.params.id
     const title = req.body.title
     const code = req.body.code

@@ -1,28 +1,108 @@
-// onlyAdmin define si autoriza admins y lo verifica en el objeto userDB
-let onlyAdmin = true;
-let userToAuth = 'admin'//req.body.username
+import path from 'path'
+import logger from './logger.js'
+import dotenv from 'dotenv'
 
-const userDB = [{username: 'user', isAdmin: false},
-                {username: 'admin', isAdmin: true}                
-                ]
-                
-const userAuth = (req, res, next) => {
-    const user = userDB.find(x => x.username === userToAuth)
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-    if (user !== undefined) {
-        if (onlyAdmin === true && user.isAdmin === true ) {
-            console.log('administrador autorizado')
-        } else if (onlyAdmin === false) {
-            console.log('usuario autorizado')
-        } else {
-        console.log('usuario NO autorizado')
-        return res.status(404).json({error: "Usuario no autorizado"})
-        }
-    } else {
-        console.log('usuario NO autorizado')
-        return res.status(404).json({error: "Usuario inexistente"})
-    }
-    next()
+function getRoot(req, res) {}
+
+function getLogin(req, res) {
+  if (req.isAuthenticated()) {
+    var user = req.user;
+    
+    console.log(user)
+
+    let userlevel = 'unknown'
+    user.isAdmin ? userlevel = 'Administrator' : userlevel = 'User'
+
+    console.log("user logueado");
+    res.render("home.ejs", {
+      usuario: user.email,
+      nombre: user.firstName,
+      apellido: user.lastName,
+      telephone: user.telephone,
+      mode: process.env.MODE || 'TEST',
+      userpicture: user.userPic,
+      level: userlevel
+    });
+  } else {
+    console.log("user NO logueado");
+    logger.warn(`timestamp: ${Date.now()} - url: ${req.url} - method: ${req.method} - User no logueado` );
+    res.sendFile(path.join(__dirname + "/../public/login.html"));
+
+  }
 }
 
-export default userAuth;
+function apiLogin(req, res, next) {
+  if (req.isAuthenticated()) {
+    var user = req.user;
+    console.log("user logueado");
+    next()
+  } else {
+    console.log("user NO logueado");
+    logger.warn(`timestamp: ${Date.now()} - url: ${req.url} - method: ${req.method} - User no logueado` );
+    return res.status(404).json({error: "Usuario no autorizado"})
+  }
+}
+
+function isAdmin(req, res, next) {
+  var user = req.user;
+  if (user.isAdmin) {
+    next()
+  } else {
+    return res.status(404).json({error: "Usuario sin privilegios de administrador"})
+  }
+}
+
+function getSignup(req, res) {
+  res.sendFile(path.join(__dirname + "/../public/signup.html"));
+}
+
+function postLogin(req, res) {
+  var user = req.user;
+
+  res.sendFile(path.join(__dirname + "/../public/index.html"));
+}
+
+function postSignup(req, res) {
+    var user = req.user;
+    res.sendFile(path.join(__dirname + "/../public/index.html"));
+}
+
+function getFaillogin(req, res) {
+  res.render("login-error.ejs", {})
+}
+
+function getFailsignup(req, res) {
+  res.render("signup-error.ejs", {})
+}
+
+function getLogout(req, res) {
+  req.logout();
+  res.sendFile(path.join(__dirname + "/../public/home.html"));
+}
+
+function failRoute(req, res) {
+  const { url, method } = req;
+  logger.error(`timestamp: ${Date.now()} - url: ${url} - method: ${method} - routing=error`);
+  res.status(404).render("routing-error", {});
+}
+
+export default {
+  getRoot,
+  getLogin,
+  postLogin,
+  getFaillogin,
+  getLogout,
+  failRoute,
+  getSignup,
+  postSignup,
+  getFailsignup,
+  apiLogin,
+  isAdmin
+};
+
+
+

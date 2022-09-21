@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    
+    <title>Home</title>
+</head>
+<nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+        <h3 class="text-secondary p-1">CODERHOUSE - eCommmerce Backend #3 - Bienvenido <%= nombre %> - Running Mode: <%= mode %></h3>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+            <form id=buttonLogout class="d-flex" role="search">
+                <a href="/logout.html?firstname=<%= nombre %>" class="btn btn-warning" tabindex="-1" role="button" aria-disabled="true">Logout</a>
+            </form>
+        </div>
+        </div>
+    </nav>
+<body>        
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col col-sm-6">
+                <h3 class="text-primary">Perfil del usuario</h3>
+                <div id="areaProfile" style=" min-height:200px; max-height:200px; background:lightgrey; padding-top:20px; padding-left: 20px">
+                    <div class="row">
+                    <div class="col col-sm-4">
+                        <img src="/uploads/<%= userpicture %>" width="150px">
+                    </div>
+                    <div class="col col-sm-6">
+                        <h6>Username: <%= usuario %></h6>
+                        <h6>First Name: <%= nombre %></h6>
+                        <h6>Last Name: <%= apellido %></h6>
+                        <h6>Telephone: <%= telephone %></h6>
+                        <h6>User Level: <%= level %></h6>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col col-sm-6">
+                <h3 class="text-primary">Listado Productos</h3>
+                <div id="areaProducts" style=" min-height:400px; max-height:400px; background:lightgrey; overflow-y:scroll">
+                    <table class="table">
+                        <thead>
+                            <th width: 20% scope="col">title</th>
+                            <th width: 20% cope="col">price</th>
+                            <th width: 20% scope="col">image</th>
+                        </thead>
+                        <tbody id="productos">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div><br><br>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+    <script src="./ejs.min.js"></script>
+    <script src="./client.js"></script>
+</body>
+</html>

@@ -1,11 +1,14 @@
-import dotenv from "dotenv";
 dotenv.config(); 
+const DB_USER=process.env.DB_USER 
+const DB_PASSWORD=process.env.DB_PASSWORD
+const DB_NAME=process.env.DB_NAME
+const DB_CLUSTER=process.env.DB_CLUSTER
 
-console.log(process.env.FIREBASE_PRIVATE_KEY)
+import dotenv from "dotenv";
 
 export default {
     mongodb: {
-    connectionString: "mongodb://localhost:27017/ecommerce",
+    connectionString: `mongodb+srv://${DB_USER}:${DB_PASSWORD}@${DB_CLUSTER}.mongodb.net/${DB_NAME}?retryWrites=true&w=majority`
     },
     firebase: {
         "type": "service_account",

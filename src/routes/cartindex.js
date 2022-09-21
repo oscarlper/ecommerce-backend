@@ -6,8 +6,6 @@ const cartRouter = Router()
 
 import daos from "../daos/index.js";
 
-import userAuth from '../controllers/userAuth.js'
-
 let id;
 let id_prod;
 
@@ -25,7 +23,8 @@ cartRouter.get("/:id", async (req, res) => {
     res.status(response.http_res).json(response.result)
 });
 
-cartRouter.post('/',userAuth , async (req,res) => {
+//cartRouter.post('/',userAuth , async (req,res) => {
+cartRouter.post('/', async (req,res) => {
 
     const { id_prod, stock, cant } = req.body
     const timestamp_cart = Date.now()
@@ -36,20 +35,20 @@ cartRouter.post('/',userAuth , async (req,res) => {
     res.status(response.http_res).json(response.result)
 })
 
-cartRouter.delete('/:id',userAuth, async(req,res) => {
+cartRouter.delete('/:id', async(req,res) => {
     id = req.params.id
     const response = await CarritoDao.delProd(id)
     res.status(response.http_res).json(response.result)
 })
 
-cartRouter.delete('/:id/productos/:id_prod',userAuth, async(req,res) => {
+cartRouter.delete('/:id/productos/:id_prod', async(req,res) => {
     id = req.params.id
     id_prod = req.params.id_prod
     const response = await CarritoDao.delProdCart(id,id_prod)
     res.status(response.http_res).json(response.result)
 })
 
-cartRouter.post('/:id/productos',userAuth , async (req,res) => {
+cartRouter.post('/:id/productos', async (req,res) => {
     id = req.params.id
     const response = await CarritoDao.addProdCart(id,req.body)
     res.status(response.http_res).json(response.result)
