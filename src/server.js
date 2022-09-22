@@ -3,7 +3,7 @@ const app = express()
 import dotenv from 'dotenv'
 import path from 'path'
 dotenv.config()
-const portExpress = process.env.EXPRESS_PORT
+const portExpress = process.env.EXPRESS_PORT || Number(process.argv[2]) || 8000
 
 import sendNodeEmail from './controllers/nodemailer.js'
 
