@@ -18,3 +18,11 @@
 {"level":"error","message":"timestamp: 1663729891861 - Username: test00@gmail.com - Fail Signup"}
 {"level":"error","message":"timestamp: 1663729930858 - Username: test00@gmail.com - Fail Signup"}
 {"level":"error","message":"timestamp: 1663730229514 - Username: test00@gmail.com - Fail Signup"}
+{"level":"error","message":"timestamp: 1663767309553 - email: tito20 - Fail Login"}
+{"level":"error","message":"timestamp: 1663782535932 - email: coderhouse - Fail Login"}
+{"level":"error","message":"timestamp: 1663788448193 - email: coderhouse_admin - Fail Login"}
+{"level":"error","message":"timestamp: 1663789316497 - email: coderhouse_admin - Fail Login"}
+{"level":"error","message":"timestamp: 1663791384533 - email: coderhouse_admin - Fail Login"}
+{"level":"error","message":"timestamp: 1663792013289 - email: coderhouse_admin - Fail Login"}
+{"level":"error","message":"timestamp: 1663804425869 - email: oscarlper@gmail.com - Fail Login"}
+{"level":"error","message":"timestamp: 1663812666901 - Username: oscarlper@gmail.com - Fail Signup"}

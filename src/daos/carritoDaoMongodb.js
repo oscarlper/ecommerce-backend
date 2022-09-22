@@ -3,6 +3,7 @@ import ContenedorMongodb from "../containers/containerMongodb.js";
 class CarritoDaoMongodb extends ContenedorMongodb {
   constructor() {
     super("carrito", {
+          username_cart: { type: String, required: true},
           timestamp_cart: { type: String, required: true },
           products:[{
             timestamp_prod: { type: String, required: true },

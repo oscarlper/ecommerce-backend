@@ -5,7 +5,7 @@ import path from 'path'
 dotenv.config()
 const portExpress = process.env.EXPRESS_PORT
 
-//import sendNodeEmail from './controllers/nodemailer.js'
+import sendNodeEmail from './controllers/nodemailer.js'
 
 import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
@@ -118,18 +118,20 @@ const signupStrategy = new LocalStrategy(
             isAdmin: false,
             userPic: req.file.filename,
             };
-        /*
-        const newUser = {
-            username: req.body.email,
-            password: hashPassword(password),
-            firstName: req.body.firstName,
-            lastName: req.body.lastName,
-            email: req.body.email,
-            //telephone: req.body.telephone,
-            //isAdmin: true,
-            //userPic: req.file.filename,
-        };
-        */
+
+        // codigo to send
+        const subjectMail = 'New Account Created'
+        const dataMail = `username: ${email}<br>
+                        firstName: ${req.body.firstName}<br>
+                        lastName: ${req.body.lastName}<br>
+                        telephone: ${req.body.telephone}<br>
+                        `
+
+        mailOptions.subject = `CH - Notification: ${subjectMail}`
+        mailOptions.html = `<h1 style="color: blue;">Notificacion: <span style="color: green;">${subjectMail}<br>${dataMail}</span></h1>`
+        sendNodeEmail(mailOptions)
+
+
         const createdUser = await User.create(newUser);
 
         return done(null, createdUser);

@@ -6,7 +6,10 @@ const DB_CLUSTER=process.env.DB_CLUSTER
 
 import dotenv from "dotenv";
 
+const TIEMPO_EXPIRACION = 600000;
+
 export default {
+    TIEMPO_EXPIRACION,
     mongodb: {
     connectionString: `mongodb+srv://${DB_USER}:${DB_PASSWORD}@${DB_CLUSTER}.mongodb.net/${DB_NAME}?retryWrites=true&w=majority`
     },

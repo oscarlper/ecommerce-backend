@@ -12,8 +12,6 @@ function getLogin(req, res) {
   if (req.isAuthenticated()) {
     var user = req.user;
     
-    console.log(user)
-
     let userlevel = 'unknown'
     user.isAdmin ? userlevel = 'Administrator' : userlevel = 'User'
 

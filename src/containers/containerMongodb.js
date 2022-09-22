@@ -21,9 +21,23 @@ class ContenedorMongodb {
         }
     }
 
+    async listarByUsername(username) {
+        try {
+            if ((await this.coleccion.find({ username_cart: username }, { __v: 0 })).length > 0) {
+                const doc = await this.coleccion.find({ username_cart: username }, { __v: 0 });
+                return {'result': doc,'http_res':201 };
+            } else {
+                return {'result': {error: 'id no encontrado'},'http_res':404}
+            }
+        } catch (error) {
+            return {'result': {error: 'Error en db'},'http_res':404}
+        }
+    }
+
+
     async listarAll() {
         try {
-            const doc = await this.coleccion.find({}, { __v: 0 });
+            const doc = await this.coleccion.find({ }, { __v: 0 });
             return {'result': doc,'http_res':201}
         } catch (error) {
             return {'result': {error: 'Error, no se encontraron productos'},'http_res':404};

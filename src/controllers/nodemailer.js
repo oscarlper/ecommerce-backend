@@ -1,15 +1,16 @@
 import { createTransport } from 'nodemailer';
 import dotenv from 'dotenv'
+dotenv.config();
 
 const TEST_MAIL = process.env.ADMIN_MAIL
 
 const transporter = createTransport({
-   host: 'smtp.ethereal.email',
+   service: 'gmail',
    port: 587,
    auth: {
-       user: 'newton65@ethereal.email',
-       pass: 'vp7SQ4uT1y7TeRGpRb'
-   }
+       user: process.env.USER_MAIL,
+       pass: process.env.PASS_MAIL,
+   },
 });
 
  async function sendNodeEmail(mailOptions) {

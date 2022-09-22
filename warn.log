@@ -443,3 +443,240 @@
 {"level":"warn","message":"timestamp: 1663731248169 - url: /login - method: GET - User no logueado"}
 {"level":"warn","message":"timestamp: 1663731286914 - url: /login - method: GET - User no logueado"}
 {"level":"warn","message":"timestamp: 1663731341915 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663767301134 - url: /login - method: GET - User no logueado"}
+{"level":"error","message":"timestamp: 1663767309553 - email: tito20 - Fail Login"}
+{"level":"warn","message":"timestamp: 1663767317142 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663769854497 - url: /checkout.html method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663770201159 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663770208475 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663771749688 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663771750499 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663773037705 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663782531695 - url: /login - method: GET - User no logueado"}
+{"level":"error","message":"timestamp: 1663782535932 - email: coderhouse - Fail Login"}
+{"level":"warn","message":"timestamp: 1663782537138 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663782540250 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663782542816 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663782543738 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663782553405 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663782554282 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663782580974 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663782585264 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663782585323 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663782613357 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663782631191 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663782633813 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663782634867 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663782657973 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663782743095 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663782747207 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663782787192 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663782867280 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663783195718 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663783442101 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663783448701 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663783451715 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663783453940 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663783455203 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663783456038 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663783456920 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663783470192 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663783472094 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663783475283 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663783519403 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663783579091 - url: /login?username=test@test.com&password=asd123 - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663783769128 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663784141711 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663784153409 - url: / - method: POST - User no logueado"}
+{"level":"warn","message":"timestamp: 1663784375383 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663784550511 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663784588701 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663784591801 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663786921341 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663787560834 - url: / - method: POST - User no logueado"}
+{"level":"warn","message":"timestamp: 1663787679257 - url: / - method: POST - User no logueado"}
+{"level":"warn","message":"timestamp: 1663787702359 - url: / - method: POST - User no logueado"}
+{"level":"warn","message":"timestamp: 1663787737076 - url: / - method: POST - User no logueado"}
+{"level":"warn","message":"timestamp: 1663788312379 - url: / - method: GET - User no logueado"}
+{"level":"error","message":"timestamp: 1663788448193 - email: coderhouse_admin - Fail Login"}
+{"level":"warn","message":"timestamp: 1663788449654 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663788774347 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663788812076 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663788815765 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663788820599 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663788879048 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663788881730 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663788919139 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663788922516 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663788953129 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663788953392 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663788955980 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663789020538 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663789031966 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663789034496 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663789044429 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663789045480 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663789055995 - url: /checkout.html method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663789057797 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663789066479 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663789076056 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663789079035 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663789092245 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663789165720 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663789169310 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663789194492 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663789197050 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663789230862 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663789258146 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663789312297 - url: /login - method: GET - User no logueado"}
+{"level":"error","message":"timestamp: 1663789316497 - email: coderhouse_admin - Fail Login"}
+{"level":"warn","message":"timestamp: 1663789317825 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663789320908 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663789433998 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663789441029 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663789473106 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663789475823 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663789491758 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663789492599 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663789503750 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663789534319 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663789537110 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663789578337 - url: /1663788231753 - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663789673029 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663789757806 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663789855501 - url: /test@test.com - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663789923422 - url: /username - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663789971438 - url: /username - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663790001779 - url: /username - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663790031895 - url: /username - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663790073845 - url: /username - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663790098685 - url: /username - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663790201326 - url: /username - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663790265070 - url: /username - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663790532968 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663790535393 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663790539904 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663790554977 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663790557945 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663790608395 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663790611036 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663790618944 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663790708003 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663790787711 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663790851478 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663790853752 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663790856237 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663790916606 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663790919135 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663790942599 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663790945325 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663790962207 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663790964899 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663791069488 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663791072138 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663791116701 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663791119721 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663791271713 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663791274400 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663791304478 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663791306909 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663791382066 - url: /login - method: GET - User no logueado"}
+{"level":"error","message":"timestamp: 1663791384533 - email: coderhouse_admin - Fail Login"}
+{"level":"warn","message":"timestamp: 1663791385722 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663791387704 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663791423570 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663791426113 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663791518022 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663791520396 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663791543303 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663791545681 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663791558995 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663791561675 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663791595711 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663791598250 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663791656478 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663791658572 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663791675483 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663791678097 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663791728099 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663791730489 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663791740066 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663791743067 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663791773595 - url: /632b6b68c3aa43a73f20bd42 - method: POST - User no logueado"}
+{"level":"warn","message":"timestamp: 1663791777838 - url: /api/carrito/632b6b68c3aa43a73f20bd42 method: POST - Not found"}
+{"level":"warn","message":"timestamp: 1663791794186 - url: /api/carrito/632b64c76babb30a2ac3485f method: POST - Not found"}
+{"level":"warn","message":"timestamp: 1663791839488 - url: /api/carrito/632b64c76babb30a2ac3485f method: POST - Not found"}
+{"level":"warn","message":"timestamp: 1663791888927 - url: /api/carrito/632b64c76babb30a2ac3485f method: POST - Not found"}
+{"level":"warn","message":"timestamp: 1663791923058 - url: /api/carrito/632b64c76babb30a2ac3485f method: PUT - Not found"}
+{"level":"warn","message":"timestamp: 1663791948764 - url: /api/carrito/632b64c76babb30a2ac3485f/productos method: PUT - Not found"}
+{"level":"warn","message":"timestamp: 1663791958872 - url: /api/carrito/632b64c76babb30a2ac3485f/productos method: PUT - Not found"}
+{"level":"warn","message":"timestamp: 1663792009293 - url: /login - method: GET - User no logueado"}
+{"level":"error","message":"timestamp: 1663792013289 - email: coderhouse_admin - Fail Login"}
+{"level":"warn","message":"timestamp: 1663792014448 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663792016819 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663792086865 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663792089795 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663792108219 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663792111017 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663792180594 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663792183102 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663792202266 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663792204659 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663792264036 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663792276292 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663792279138 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663792287583 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663792290112 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663792301798 - url: /checkout.html method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663792303595 - url: /checkout.html method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663792304519 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663792305519 - url: /uploads/undefined_shiba.png method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663792309354 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663792318441 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663804256618 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663804421608 - url: /login - method: GET - User no logueado"}
+{"level":"error","message":"timestamp: 1663804425869 - email: oscarlper@gmail.com - Fail Login"}
+{"level":"warn","message":"timestamp: 1663804427169 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663804606483 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663805368670 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663805687641 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663806179115 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663806283033 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663806412480 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663807021009 - url: /checkout method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663807066945 - url: /carrito/checkout method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663807081214 - url: /carritos/checkout method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663807088517 - url: /carrito/ method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663807090953 - url: /carrito/ method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663807091649 - url: /carritos/checkout method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663807092483 - url: /carrito/checkout method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663807095870 - url: /carritos method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663807149928 - url: /carrito/checkout method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663807163250 - url: /carrito/checkout/ method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1663807183542 - url: /checkout/ - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663807208598 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663807372454 - url: /checkout/ - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663807383238 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663807410275 - url: /checkout/ - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663807415659 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663807477370 - url: /checkout/ - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663807480773 - url: /checkout - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663807484218 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663807488341 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663807700967 - url: /checkout - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663808487782 - url: /checkout - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663808520671 - url: /checkout - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663809696350 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663811501317 - url: /checkout - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663811514147 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663811642233 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663812632633 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663812644167 - url: /login - method: GET - User no logueado"}
+{"level":"error","message":"timestamp: 1663812666901 - Username: oscarlper@gmail.com - Fail Signup"}
+{"level":"warn","message":"timestamp: 1663813159931 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663813508913 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663813736558 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663814065285 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663814773326 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663815084820 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1663815179405 - url: /login - method: GET - User no logueado"}
