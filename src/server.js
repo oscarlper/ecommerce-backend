@@ -85,7 +85,7 @@ if (isCluster && cluster.isPrimary) {
 
     })
 } else {
-    const expressServer = app.listen(portExpress, () => 
+    const expressServer = app.listen(portExpress, '0.0.0.0', () => 
     console.log(`Server listening on port ${portExpress}`))
 }
 //
