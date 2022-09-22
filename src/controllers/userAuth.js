@@ -15,7 +15,7 @@ function getLogin(req, res) {
     let userlevel = 'unknown'
     user.isAdmin ? userlevel = 'Administrator' : userlevel = 'User'
 
-    console.log("user logueado");
+    logger.verbose(`timestamp: ${Date.now()} user logueado`);
     res.render("home.ejs", {
       usuario: user.email,
       nombre: user.firstName,
@@ -26,7 +26,7 @@ function getLogin(req, res) {
       level: userlevel
     });
   } else {
-    console.log("user NO logueado");
+    logger.verbose(`timestamp: ${Date.now()} user NO logueado`);
     logger.warn(`timestamp: ${Date.now()} - url: ${req.url} - method: ${req.method} - User no logueado` );
     res.sendFile(path.join(__dirname + "/../public/login.html"));
 
@@ -36,10 +36,9 @@ function getLogin(req, res) {
 function apiLogin(req, res, next) {
   if (req.isAuthenticated()) {
     var user = req.user;
-    console.log("user logueado");
     next()
   } else {
-    console.log("user NO logueado");
+    logger.verbose(`timestamp: ${Date.now()} user NO logueado`);
     logger.warn(`timestamp: ${Date.now()} - url: ${req.url} - method: ${req.method} - User no logueado` );
     return res.status(404).json({error: "Usuario no autorizado"})
   }

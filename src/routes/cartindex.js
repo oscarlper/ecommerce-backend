@@ -96,7 +96,6 @@ async function sendEmailCart(response,username,fullname) {
     let dataMailHTML = `<p>Carrito de compras</p>`
 
     prodCart.forEach(item => {
-        console.log(item.id_prod)
         dataMailHTML += `<p>id_prod: ${item.id_prod} - cant: ${item.cant}</p>`
     })
 
@@ -117,9 +116,9 @@ async function sendSMS(phonenumber){
         from: '+19288578634',
         to: '+5491156391497'
         }) 
-        console.log(message)
+        logger.verbose(`timestamp: ${Date.now()} - ${message}`);
     } catch(error) {
-        console.log(error)
+        logger.verbose(`timestamp: ${Date.now()} - ${error}`);
     }
 }
 
@@ -133,9 +132,9 @@ async function sendWhatsapp(username, fullname) {
     try {
         const message = await client.messages.create(options);
     
-        console.log(message);
+        logger.verbose(`timestamp: ${Date.now()} - ${message}`);
     } catch (error) {
-        console.log(error);
+        logger.verbose(`timestamp: ${Date.now()} - ${error}`);
     }
 }
 

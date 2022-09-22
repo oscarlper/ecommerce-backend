@@ -79,15 +79,14 @@ if (isCluster && cluster.isPrimary) {
     cluster.fork()
 
     cluster.on("exit", (worker) => {
-        console.log(`Worker ${worker.process.id} stopped`);
-
+        logger.verbose('timestamp: '+Date.now()+' - Worker '+worker.process.id+' stopped');
         cluster.fork()
 
     })
 } else {
-    const expressServer = app.listen(PORT, '0.0.0.0', () => 
-    console.log(`Server listening on port ${PORT}`))
-}
+    const expressServer = app.listen(PORT, '0.0.0.0', () =>
+    logger.verbose('timestamp: '+Date.now()+' - Server listening on port '+ PORT )
+)}
 //
 
 function hashPassword(password) {
@@ -135,9 +134,9 @@ const signupStrategy = new LocalStrategy(
         const createdUser = await User.create(newUser);
 
         return done(null, createdUser);
-    } catch (err) {
-        console.log(err);
-        done(err);
+    } catch (error) {
+        logger.verbose(`timestamp: ${Date.now()} - ${error}`);
+        done(error);
     }
     }
 );
@@ -204,7 +203,6 @@ app.use('/api/productos', userAuth.apiLogin, prodRouter)
 app.use('/api/carrito', userAuth.apiLogin, cartRouter)
 
 app.use((req,res) => {
-    //console.log(req.session)
     const { url, method } = req;
     logger.warn(`timestamp: ${Date.now()} - url: ${url} method: ${method} - Not found`);
     

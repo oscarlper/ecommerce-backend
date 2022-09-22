@@ -14,8 +14,8 @@ prodRouter.get("/", async (req, res) => {
 try{
     const response = await productoDao.listarAll()
         res.status(response.http_res).json(response.result)
-} catch(e) {
-    console.log(e)
+} catch(error) {
+    logger.verbose(`timestamp: ${Date.now()} - ${error}`);
 }
     }
 );
