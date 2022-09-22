@@ -3,7 +3,7 @@ const app = express()
 import dotenv from 'dotenv'
 import path from 'path'
 dotenv.config()
-const portExpress = process.env.EXPRESS_PORT || Number(process.argv[2]) || 8000
+const PORT = process.env.PORT || Number(process.argv[2]) || 3000
 
 import sendNodeEmail from './controllers/nodemailer.js'
 
@@ -85,8 +85,8 @@ if (isCluster && cluster.isPrimary) {
 
     })
 } else {
-    const expressServer = app.listen(portExpress, '0.0.0.0', () => 
-    console.log(`Server listening on port ${portExpress}`))
+    const expressServer = app.listen(PORT, '0.0.0.0', () => 
+    console.log(`Server listening on port ${PORT}`))
 }
 //
 
