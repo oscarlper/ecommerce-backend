@@ -1,9 +1,82 @@
 import express from 'express'
 const app = express()
+
 import dotenv from 'dotenv'
 import path from 'path'
 dotenv.config()
 const PORT = process.env.PORT || Number(process.argv[2]) || 3000
+
+const expressServer = app.listen(PORT, '0.0.0.0', () =>
+logger.verbose('timestamp: '+Date.now()+' - Server listening on port '+ PORT ))
+
+// CHAT
+let userName = 'NN'
+const messages = [] 
+import mdb_mensaje from './models/schemaMongodbChat.js'
+
+import { Server } from 'socket.io';
+
+const io = new Server(expressServer);
+
+io.on('connection', async (socket) => {
+    console.log('Se conecto un usuario nuevo')
+    socket.emit('server:chat', messages)
+
+    socket.emit('server:username', userName)
+    
+        socket.emit('server:chat', messages)
+
+    socket.on('server:chat', async inputMessage => {
+        messages.push(
+                { author:{
+                    timestamp: inputMessage.dateMark,
+                    id: inputMessage.id,
+                    nombre: inputMessage.nombre,
+                    apellido: inputMessage.apellido,
+                    edad: inputMessage.edad,
+                    alias: inputMessage.alias,
+                    avatar: inputMessage.avatar,
+                },
+                text: inputMessage.message
+                }
+        )
+
+        // Guardo mensajes en mongoDB
+        await saveMessageMDB(inputMessage)
+        io.emit('server:chat', messages)
+    })
+})
+
+async function saveMessageMDB(inputMessage) {
+    mdb_mensaje.create(
+            { author:{
+                timestamp: inputMessage.dateMark,
+                id: inputMessage.id,
+                nombre: inputMessage.nombre,
+                apellido: inputMessage.apellido,
+                edad: inputMessage.edad,
+                alias: inputMessage.alias,
+                avatar: inputMessage.avatar,
+            },
+            text: inputMessage.message
+            })
+}
+
+( async () => {
+    try {
+        // historial chat mongodb
+        let mensajes = await mdb_mensaje.find({},{__v:0})
+        mensajes = JSON.parse(JSON.stringify(mensajes))
+        mensajes.forEach(element => {
+            messages.push(element)
+        });
+    } catch(e) {
+        logger.error(`timestamp: ${Date.now()} - Read error - ${e}`);
+        console.log('error al leer mensajes historicos: ',e) 
+    }
+})();
+
+// FIN CHAT
 
 import sendNodeEmail from './controllers/nodemailer.js'
 
@@ -14,10 +87,6 @@ const __dirname = path.dirname(__filename);
 import logger from './controllers/logger.js'
 
 const SESSION_SECRET=process.env.SESSION_SECRET
-const isCluster = process.argv[3] == 'cluster'
-
-import cluster from 'cluster'
-import os from 'os'
 
 import multer from 'multer'
 
@@ -48,7 +117,7 @@ import config from './config.js'
 
 import prodRouter from './routes/prodindex.js'
 import cartRouter from './routes/cartindex.js'
-import userAuth from './controllers/userAuth.js'
+import userAuth from './controllers/main.js'
 
 import User from './models/userModel.js'
 
@@ -72,22 +141,6 @@ app.use(
 
 app.use(passport.initialize());
 app.use(passport.session());
-
-// CLUSTER
-if (isCluster && cluster.isPrimary) {
-        
-    cluster.fork()
-
-    cluster.on("exit", (worker) => {
-        logger.verbose('timestamp: '+Date.now()+' - Worker '+worker.process.id+' stopped');
-        cluster.fork()
-
-    })
-} else {
-    const expressServer = app.listen(PORT, '0.0.0.0', () =>
-    logger.verbose('timestamp: '+Date.now()+' - Server listening on port '+ PORT )
-)}
-//
 
 function hashPassword(password) {
     return bcrypt.hashSync(password, bcrypt.genSaltSync(10));
@@ -201,6 +254,7 @@ app.get("/api/logout", async (req, res) => {
 
 app.use('/api/productos', userAuth.apiLogin, prodRouter)
 app.use('/api/carrito', userAuth.apiLogin, cartRouter)
+
 
 app.use((req,res) => {
     const { url, method } = req;

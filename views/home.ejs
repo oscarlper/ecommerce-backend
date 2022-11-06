@@ -46,42 +46,27 @@
                 </div>
             </div>
         </div><br><br>
+
         <div class="row justify-content-center">
-            <div class="col col-sm-6">
-                <h3 class="text-primary">Listado Productos</h3>
-                <div id="areaProducts" style=" min-height:400px; max-height:400px; background:lightgrey; overflow-y:scroll">
-                    <table class="table">
-                        <thead>
-                            <th width: 20% scope="col">title</th>
-                            <th width: 20% cope="col">price</th>
-                            <th width: 20% scope="col">image</th>
-                        </thead>
-                        <tbody id="productos">
-                        </tbody>
-                    </table>
-                </div>
+            <div class="col col-sm-6"><br><br>
+                <h3 class="text-primary">Centro de Mensajes</h3>
+                <div id="areaChat" style="min-height:400px; max-height:400px;  background:lightgrey; overflow-wrap: break-word; overflow-y:scroll"></div>
+                <form id="formMessage">
+                    <input type='id' name='idInput' id='idInput' placeholder="correo electronico">
+                    <input type='nombre' name='nombreInput' id='nombreInput' placeholder="nombre">
+                    <input type='apellido' name='apellidoInput' id='apellidoInput' placeholder="apellido">
+                    <input type='edad' name='edadInput' id='edadInput' placeholder="edad">
+                    <input type='alias' name='aliasInput' id='aliasInput' placeholder="alias">
+                    <input type='avatar' name='avatarInput' id='avatarInput' placeholder="Seleccione su avatar">
+                    <input type='text' name='messageInput' id='messageInput' placeholder="mensaje">
+                    <input class="btn btn-primary" type="submit" value="Enviar">
+                </form>
             </div>
-        </div><br><br>
-        <div class="row justify-content-center">
-            <div class="col col-sm-6">
-                <h3 class="text-primary">Carrito</h3>
-                <div id="cartArea" style=" min-height:400px; max-height:400px; background:lightgrey; overflow-y:scroll">
-                    <table class="table">
-                        <thead>
-                            <th width: 20% scope="col">id_prod</th>
-                            <th width: 20% cope="col">amount</th>
-                        </thead>
-                        <tbody id="cartItems">
-                        </tbody>
-                    </table>
-                </div>
-                <center><br>
-                <a href="/api/carrito/checkout" class="btn btn-warning" tabindex="-1" role="button" aria-disabled="true">Finalizar compra</a>
-            </div>
-        </div><br><br>
+        </div>
 
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.3/socket.io.js"></script>
     <script src="./ejs.min.js"></script>
     <script src="./client.js"></script>
 </body>

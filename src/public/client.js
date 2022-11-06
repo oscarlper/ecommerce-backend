@@ -62,3 +62,48 @@ async function renderCart(apiDataCart) {
 
 getProducts()
 getCart()
+
+//CHAT
+
+const socket = io()
+
+function renderChat(messageInput) {
+    try {
+        const html = messageInput.map(messageValue => {
+            return(`<div>
+                <div><span class=text-primary style='font-size:0.65rem; font-weight: bold'>${messageValue.author.timestamp} - 
+                <span style='font-size:0.75rem; color: brown;font-weight: normal'>${messageValue.author.id}: </span></span>
+                <em class="text-success text-wrap" style="width: 24rem;">${messageValue.text}</em>`)
+        }).join(" ");
+        areaChat.innerHTML = html
+    } catch(error) {
+        console.log(`Hubo un error ${error}`)
+    }
+}
+
+formMessage.addEventListener('submit', eventChat => {
+    eventChat.preventDefault()
+    submitMessage()
+})
+
+function submitMessage() {
+    try {
+        const newDate = new Date();
+        const dateMark = newDate.toLocaleString()
+        const id = idInput.value
+        const nombre = nombreInput.value
+        const apellido = apellidoInput.value
+        const edad = edadInput.value
+        const alias = aliasInput.value
+        const avatar = avatarInput.value
+        const message = messageInput.value
+
+        socket.emit('server:chat', {dateMark,id,nombre,apellido,edad,alias,avatar,message})
+    } catch(error) {
+        console.log(`Hubo un error ${error}`)
+    }
+}
+socket.on('server:chat', messageInput => {
+    document.querySelector('#areaChat').innerHTML=""
+    renderChat(messageInput)
+})

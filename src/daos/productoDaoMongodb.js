@@ -1,4 +1,4 @@
-import ContenedorMongodb from "../containers/containerMongodb.js";
+import ContenedorMongodb from "../classes/containerMongodb.js";
 
 class ProductoDaoMongodb extends ContenedorMongodb {
   constructor() {

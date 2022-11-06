@@ -26,3 +26,12 @@
 {"level":"error","message":"timestamp: 1663792013289 - email: coderhouse_admin - Fail Login"}
 {"level":"error","message":"timestamp: 1663804425869 - email: oscarlper@gmail.com - Fail Login"}
 {"level":"error","message":"timestamp: 1663812666901 - Username: oscarlper@gmail.com - Fail Signup"}
+{"level":"error","message":"timestamp: 1667697846907 - Read error - ReferenceError: mdb_mensaje is not defined"}
+{"level":"error","message":"timestamp: 1667697850941 - Read error - ReferenceError: mdb_mensaje is not defined"}
+{"level":"error","message":"timestamp: 1667698140931 - Read error - ReferenceError: messages is not defined"}
+{"level":"error","message":"timestamp: 1667698187197 - Read error - ReferenceError: messages is not defined"}
+{"level":"error","message":"timestamp: 1667749817207 - email: oscarlper3 - Fail Login"}
+{"level":"error","message":"timestamp: 1667749821665 - email: coderhouse - Fail Login"}
+{"level":"error","message":"timestamp: 1667749849822 - email: oscarlper - Fail Login"}
+{"level":"error","message":"timestamp: 1667749854539 - email: oscarlper - Fail Login"}
+{"level":"error","message":"timestamp: 1667749862019 - email: oscarlper - Fail Login"}
