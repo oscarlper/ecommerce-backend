@@ -45,26 +45,30 @@
                 </div>
                 </div>
             </div>
-        </div><br><br>
-
+        </div>
         <div class="row justify-content-center">
             <div class="col col-sm-6"><br><br>
                 <h3 class="text-primary">Centro de Mensajes</h3>
                 <div id="areaChat" style="min-height:400px; max-height:400px;  background:lightgrey; overflow-wrap: break-word; overflow-y:scroll"></div>
                 <form id="formMessage">
-                    <input type='id' name='idInput' id='idInput' placeholder="correo electronico">
-                    <input type='nombre' name='nombreInput' id='nombreInput' placeholder="nombre">
-                    <input type='apellido' name='apellidoInput' id='apellidoInput' placeholder="apellido">
-                    <input type='edad' name='edadInput' id='edadInput' placeholder="edad">
-                    <input type='alias' name='aliasInput' id='aliasInput' placeholder="alias">
-                    <input type='avatar' name='avatarInput' id='avatarInput' placeholder="Seleccione su avatar">
-                    <input type='text' name='messageInput' id='messageInput' placeholder="mensaje">
+                    <label>Usuario:<br><input type='id' name='idInput' id='idInput' value='<%= usuario %>' disabled=true>
+                    </label><br>
+                    <label>Nombre: <input type='nombre' name='nombreInput' id='nombreInput' value='<%= nombre %>' disabled=true>
+                    </label><br>
+                    <label>Apellido: <input type='apellido' name='apellidoInput' id='apellidoInput' value='<%= apellido %>' disabled=true>
+                    </label><br>
+                    <label>Edad: <input type='edad' name='edadInput' id='edadInput' placeholder="edad">
+                    </label><br>
+                    <label>Alias: <input type='alias' name='aliasInput' id='aliasInput' value='<%= nombre %>_<%= apellido %>'>
+                    </label><br>
+                    <label>Avatar: <input type='avatar' name='avatarInput' id='avatarInput' placeholder="Seleccione su avatar">
+                    </label><br>
+                    <label>Mensaje: <input type='text' name='messageInput' id='messageInput' placeholder="mensaje"><br><br>
                     <input class="btn btn-primary" type="submit" value="Enviar">
                 </form>
             </div>
         </div>
-
-    </div>
+    </div><br><br>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.3/socket.io.js"></script>
     <script src="./ejs.min.js"></script>
