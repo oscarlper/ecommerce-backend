@@ -4,7 +4,7 @@ const app = express()
 import dotenv from 'dotenv'
 import path from 'path'
 dotenv.config()
-const PORT = process.env.PORT || Number(process.argv[2]) || 3000
+const PORT = process.env.PORT
 
 const expressServer = app.listen(PORT, '0.0.0.0', () =>
 logger.verbose('timestamp: '+Date.now()+' - Server listening on port '+ PORT ))
@@ -37,6 +37,7 @@ io.on('connection', async (socket) => {
                     alias: inputMessage.alias,
                     avatar: inputMessage.avatar,
                 },
+                targetMsg: inputMessage.targetMsg,
                 text: inputMessage.message
                 }
         )
@@ -58,6 +59,7 @@ async function saveMessageMDB(inputMessage) {
                 alias: inputMessage.alias,
                 avatar: inputMessage.avatar,
             },
+            targetMsg: inputMessage.targetMsg,
             text: inputMessage.message
             })
 }

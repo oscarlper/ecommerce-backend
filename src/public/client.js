@@ -10,6 +10,7 @@ const apellidoInput = document.querySelector('#apellidoInput')
 const edadInput = document.querySelector('#edadInput')
 const aliasInput = document.querySelector('#aliasInput')
 const avatarInput = document.querySelector('#avatarInput')
+const totargetMsgInput = document.querySelector('#targetMsgInput')
 const messageInput = document.querySelector('#messageInput')
 
 async function getProducts() {
@@ -60,8 +61,8 @@ async function renderCart(apiDataCart) {
     })
 }
 
-getProducts()
-getCart()
+//getProducts()
+//getCart()
 
 //CHAT
 
@@ -96,9 +97,10 @@ function submitMessage() {
         const edad = edadInput.value
         const alias = aliasInput.value
         const avatar = avatarInput.value
+        const targetMsg = targetMsgInput.value
         const message = messageInput.value
 
-        socket.emit('server:chat', {dateMark,id,nombre,apellido,edad,alias,avatar,message})
+        socket.emit('server:chat', {dateMark,id,nombre,apellido,edad,alias,avatar,targetMsg,message})
     } catch(error) {
         console.log(`Hubo un error ${error}`)
     }

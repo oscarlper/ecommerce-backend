@@ -1,19 +1,48 @@
 import path from 'path'
 import logger from './logger.js'
 import dotenv from 'dotenv'
+import os from 'os'
+
+dotenv.config()
 
 import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+let osCPU = null
+let expressPORT = null
+let database = null
+let db_user = null
+let db_cluster = null
+let db_name = null
+let running_mode = null
+let admin_mail = null
+let admin_wsp = null
+let sendmail = null
+let userlevel = 'unknown'
+
 function getRoot(req, res) {}
 
 function getLogin(req, res) {
   if (req.isAuthenticated()) {
-    var user = req.user;
+    var user = req.user;   
     
-    let userlevel = 'unknown'
-    user.isAdmin ? userlevel = 'Administrator' : userlevel = 'User'
+    if (user.isAdmin) {
+      userlevel = 'Administrator'
+      osCPU = os.cpus().length
+      expressPORT = process.env.PORT
+      database = process.env.DATABASE
+      db_user = process.env.DB_USER
+      db_cluster = process.env.DB_CLUSTER
+      db_name = process.env.DB_NAME
+      running_mode = process.env.MODE
+      admin_mail = process.env.ADMIN_MAIL
+      admin_wsp = process.env.ADMIN_WHATSAPP
+      sendmail = process.env.USER_MAIL  
+      console.log(sendmail)
+    } else { 
+      userlevel = 'User'
+    }
 
     logger.verbose(`timestamp: ${Date.now()} user logueado`);
     res.render("home.ejs", {
@@ -23,7 +52,17 @@ function getLogin(req, res) {
       telephone: user.telephone,
       mode: process.env.MODE || 'TEST',
       userpicture: user.userPic,
-      level: userlevel
+      level: userlevel,
+      oscpu: osCPU,
+      expressport: expressPORT,
+      database: database,
+      dbuser: db_user,
+      dbcluster: db_cluster,
+      dbname: db_name,
+      runnningmode: running_mode,
+      adminmail: admin_mail,
+      adminwsp: admin_wsp,
+      sendmail: sendmail
     });
   } else {
     logger.verbose(`timestamp: ${Date.now()} user NO logueado`);
