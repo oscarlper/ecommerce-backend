@@ -13,7 +13,7 @@
 </head>
 <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
-        <h3 class="text-secondary p-1">CODERHOUSE - eCommmerce Backend #3 - Bienvenido <%= nombre %> - Running Mode: <%= mode %></h3>
+        <h3 class="text-secondary p-1">CODERHOUSE - eCommmerce Backend #3 - Bienvenido <%= nombre %></h3>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -43,9 +43,33 @@
                         <h6>User Level: <%= level %></h6>
                     </div>
                 </div>
-                </div>
             </div>
         </div>
+        <% if (level === 'Administrator') { %>
+            <div class="row justify-content-center">
+                <div class="col col-sm-6"><br>
+                    <h3 class="text-primary">Environment Section (only admins)</h3>
+                    <div id="areaProfile" style=" min-height:320px; max-height:320px; background:lightgrey; padding-top:20px; padding-left: 20px">
+                            <div class="col col-sm-6">
+                                <h6>level: <%= level %></h6>
+                                <h6>oscpu: <%= oscpu %></h6>
+                                <h6>expressport: <%= expressport %></h6>
+                                <h6>database: <%= database %></h6>
+                                <h6>dbuser: <%= dbuser %></h6>
+                                <h6>dbcluster: <%= dbcluster %></h6>
+                                <h6>dbname: <%= dbname %></h6>
+                                <h6>runnningmode: <%= runnningmode %></h6>
+                                <h6>adminmail: <%= adminmail %></h6>
+                                <h6>adminwsp: <%= adminwsp %></h6>
+                                <h6>sendmail: <%= sendmail %></h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+            
+
         <div class="row justify-content-center">
             <div class="col col-sm-6"><br><br>
                 <h3 class="text-primary">Centro de Mensajes</h3>
@@ -62,6 +86,13 @@
                     <label>Alias: <input type='alias' name='aliasInput' id='aliasInput' value='<%= nombre %>_<%= apellido %>'>
                     </label><br>
                     <label>Avatar: <input type='avatar' name='avatarInput' id='avatarInput' placeholder="Seleccione su avatar">
+                    </label><br>
+                    <label>Destinatario: <input type='targetMsg' name='targetMsgInput' id='targetMsgInput' value='Todos'>
+                    </label><br>
+                    <label>Mensajes: <select type='myMsgs' name='myMsgInput' id='myMsgInput' value='Todos'>
+                                        <option>Chat general</option>
+                                        <option>Solo mis mensajes</option>
+                                    </select>
                     </label><br>
                     <label>Mensaje: <input type='text' name='messageInput' id='messageInput' placeholder="mensaje"><br><br>
                     <input class="btn btn-primary" type="submit" value="Enviar">

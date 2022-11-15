@@ -34,7 +34,6 @@ class ContenedorMongodb {
         }
     }
 
-
     async listarAll() {
         try {
             const doc = await this.coleccion.find({ }, { __v: 0 });

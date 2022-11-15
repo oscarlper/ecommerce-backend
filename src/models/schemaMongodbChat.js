@@ -11,6 +11,7 @@ const chatSchema = new mongoose.Schema(
     alias:{type: String, require: true, max: 50},
     avatar:{type: String, require: true, max: 250},
     },
+    targetMsg: {type: String, require: true, max: 250},
     text: {type: String, require: true, max: 500}
   })
 

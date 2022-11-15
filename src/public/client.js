@@ -10,7 +10,9 @@ const apellidoInput = document.querySelector('#apellidoInput')
 const edadInput = document.querySelector('#edadInput')
 const aliasInput = document.querySelector('#aliasInput')
 const avatarInput = document.querySelector('#avatarInput')
+const totargetMsgInput = document.querySelector('#targetMsgInput')
 const messageInput = document.querySelector('#messageInput')
+let messageHistory;
 
 async function getProducts() {
 
@@ -60,8 +62,8 @@ async function renderCart(apiDataCart) {
     })
 }
 
-getProducts()
-getCart()
+//getProducts()
+//getCart()
 
 //CHAT
 
@@ -70,16 +72,29 @@ const socket = io()
 function renderChat(messageInput) {
     try {
         const html = messageInput.map(messageValue => {
-            return(`<div>
-                <div><span class=text-primary style='font-size:0.65rem; font-weight: bold'>${messageValue.author.timestamp} - 
-                <span style='font-size:0.75rem; color: brown;font-weight: normal'>${messageValue.author.id}: </span></span>
-                <em class="text-success text-wrap" style="width: 24rem;">${messageValue.text}</em>`)
+            if ((document.getElementById('myMsgInput').value) == "Solo mis mensajes") {
+                if (messageValue.author.id == idInput.value || messageValue.targetMsg == idInput.value) {
+                    return(`<div>
+                    <div><span class=text-primary style='font-size:0.65rem; font-weight: bold'>${messageValue.author.timestamp} - 
+                    <span style='font-size:0.75rem; color: brown;font-weight: normal'>${messageValue.author.id}: </span></span>
+                    <em class="text-success text-wrap" style="width: 24rem;">${messageValue.text}</em>`)
+                } 
+            } else {       
+                    return(`<div>
+                    <div><span class=text-primary style='font-size:0.65rem; font-weight: bold'>${messageValue.author.timestamp} - 
+                    <span style='font-size:0.75rem; color: brown;font-weight: normal'>${messageValue.author.id}: </span></span>
+                    <em class="text-success text-wrap" style="width: 24rem;">${messageValue.text}</em>`)
+            }
         }).join(" ");
         areaChat.innerHTML = html
     } catch(error) {
         console.log(`Hubo un error ${error}`)
     }
 }
+
+$('#myMsgInput').change(function(){
+    renderChat(messageHistory);
+});
 
 formMessage.addEventListener('submit', eventChat => {
     eventChat.preventDefault()
@@ -96,14 +111,16 @@ function submitMessage() {
         const edad = edadInput.value
         const alias = aliasInput.value
         const avatar = avatarInput.value
+        const targetMsg = targetMsgInput.value
         const message = messageInput.value
 
-        socket.emit('server:chat', {dateMark,id,nombre,apellido,edad,alias,avatar,message})
+        socket.emit('server:chat', {dateMark,id,nombre,apellido,edad,alias,avatar,targetMsg,message})
     } catch(error) {
         console.log(`Hubo un error ${error}`)
     }
 }
 socket.on('server:chat', messageInput => {
     document.querySelector('#areaChat').innerHTML=""
+    messageHistory = messageInput;
     renderChat(messageInput)
 })

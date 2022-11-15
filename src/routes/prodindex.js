@@ -6,9 +6,11 @@ import daos from "../daos/index.js";
 
 import userAuth from '../controllers/main.js'
 
+import logger from '../controllers/logger.js'
+
 let id;
 
-const productoDao = new daos.ProductoDao
+const productoDao = daos.ProductoDao
 
 prodRouter.get("/", async (req, res) => {
 try{
