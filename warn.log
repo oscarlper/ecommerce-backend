@@ -1494,3 +1494,18 @@
 {"level":"warn","message":"timestamp: 1668564970461 - url: /6374232d12914c9058d5d08b/productos - method: POST - User no logueado"}
 {"level":"warn","message":"timestamp: 1668565044330 - url: /6374232d12914c9058d5d08b/productos - method: POST - User no logueado"}
 {"level":"warn","message":"timestamp: 1668565045874 - url: /6374232d12914c9058d5d08b/productos - method: POST - User no logueado"}
+{"level":"error","message":"timestamp: 1668567099592 - email: ramon90cito@gmail.com - Fail Login"}
+{"level":"warn","message":"timestamp: 1668567100824 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1668567574878 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1668606340434 - url: /6374232d12914c9058d5d08b/productos - method: POST - User no logueado"}
+{"level":"warn","message":"timestamp: 1668606423182 - url: /6374232d12914c9058d5d08b/productos - method: POST - User no logueado"}
+{"level":"warn","message":"timestamp: 1668607429095 - url: /6374232d12914c9058d5d08b/productos - method: POST - User no logueado"}
+{"level":"warn","message":"timestamp: 1668608680634 - url: /6374232d12914c9058d5d08b/productos - method: POST - User no logueado"}
+{"level":"warn","message":"timestamp: 1668609426033 - url: /6374232d12914c9058d5d08b/productos - method: POST - User no logueado"}
+{"level":"warn","message":"timestamp: 1668610753939 - url: /6374232d12914c9058d5d08b/productos - method: POST - User no logueado"}
+{"level":"warn","message":"timestamp: 1668611008034 - url: /6374232d12914c9058d5d08b/productos - method: POST - User no logueado"}
+{"level":"warn","message":"timestamp: 1668611458719 - url: /6374232d12914c9058d5d08b/productos - method: POST - User no logueado"}
+{"level":"warn","message":"timestamp: 1668611496386 - url: /6374232d12914c9058d5d08b/productos - method: POST - User no logueado"}
+{"level":"warn","message":"timestamp: 1668611533730 - url: /6374232d12914c9058d5d08b/productos - method: POST - User no logueado"}
+{"level":"warn","message":"timestamp: 1668611666332 - url: /6374232d12914c9058d5d08b/productos - method: POST - User no logueado"}
+{"level":"warn","message":"timestamp: 1668611796051 - url: /6374232d12914c9058d5d08b/productos - method: POST - User no logueado"}

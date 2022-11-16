@@ -85,6 +85,7 @@ class ContenedorMongodb {
         }
     }
 
+/*
     async addProdCart(id,data) {
         try {
             if ((await this.coleccion.find({ _id: id }, { __v: 0 })).length > 0) {
@@ -98,6 +99,35 @@ class ContenedorMongodb {
         } catch (error) {
             return {'result': {error: 'Error en db'},'http_res':404}
         }
+    }
+*/
+
+    async addProdCart(id,data) {
+        try {
+            const doc = await this.coleccion.findOne({$and:[{"_id":id},{"products.id_prod":data.id_prod}]})
+            const id_prod_Index = doc.products.findIndex(product => product.id_prod == data.id_prod)
+            doc.products[id_prod_Index].cant = parseInt(doc.products[id_prod_Index].cant) + parseInt(data.cant)
+            try {
+                const result = await this.coleccion.updateOne(
+                    { "_id": id },
+                    { $pull: { "products": { "id_prod": data.id_prod } } },
+                );
+                await Cart.updateOne({ _id:id }, { $set: { "products":doc.products[id_prod_Index] } })
+                return {'result': {'id': doc._id}, 'http_res':201}
+            } catch{err} {
+                return {'result': {error: 'Error en db'},'http_res':404}
+            }
+            
+        } catch(err) {
+            try {
+                    const result = await this.coleccion.updateOne({_id: id},{$push: {products: data}});
+                    console.log(result)
+                    return await this.listar(id)
+            } catch (error) {
+                return {'result': {error: 'Error en db'},'http_res':404}
+            }
+        }
+    
     }
 
     async newCart(objetoCart) {
