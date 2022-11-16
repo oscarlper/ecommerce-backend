@@ -22,8 +22,6 @@ class ContenedorMongodb {
     }
 
     async listarByCat(cat) {
-        console.log('listarbycat')
-        console.log(cat)
         try {
             if ((await this.coleccion.find({ category: cat }, { __v: 0 })).length > 0) {
                 const doc = await this.coleccion.find({ category:cat });
@@ -63,7 +61,6 @@ class ContenedorMongodb {
             const doc = await this.coleccion.create(objetoProd)
             return {'result': {'id': doc._id}, 'http_res':201}
         } catch (error) {
-            console.log(error)
             return {'result': {error: 'Error de escritura en db'},'http_res':404}
         }
     }
@@ -84,12 +81,10 @@ class ContenedorMongodb {
     async delProdCart(id,id_prod) {
         try {
             if ((await this.coleccion.find({ $and:[{id: id}] }, { __v: 0 })).length > 0) {
-                console.log('encontrado')
                 const result = await this.coleccion.updateOne(
                     { "_id": id },
                     { $pull: { "products": { "id_prod": id_prod } } },
                 );
-                console.log(result)
                 return await this.listar(id)
             } else {
                 return {'result': {error: 'id no encontrado'},'http_res':404}
@@ -118,7 +113,6 @@ class ContenedorMongodb {
         } catch(err) {
             try {
                     const result = await this.coleccion.updateOne({_id: id},{$push: {products: data}});
-                    console.log(result)
                     return await this.listar(id)
             } catch (error) {
                 return {'result': {error: 'Error en db'},'http_res':404}
@@ -154,18 +148,15 @@ class ContenedorMongodb {
                 data.stock == null || data.stock == undefined ? dataToUpdate.stock = doc[0].stock : dataToUpdate.stock = data.stock
                 data.category == null || data.category == undefined ? dataToUpdate.category = doc[0].category : dataToUpdate.category = data.category
                 try {
-                    console.log(dataToUpdate)
                     const doc = await this.coleccion.updateOne({ _id: id }, dataToUpdate);
                     return await this.listar(id)
                 } catch (error) {
-                    console.log(error);
                     return {'result':  {error: 'No se actualizo el producto, error de db'},'http_res':404}
                 }
             } else {
                 return {'result': {error: 'producto no encontrado'},'http_res':404}
             }
         } catch(error){
-            console.log(error)
             return {'result':  {error: 'No se actualizo el producto, error de db'},'http_res':404}
         }
     }

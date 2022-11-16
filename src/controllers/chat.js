@@ -9,7 +9,6 @@ function chat(expressServer) {
     const io = new Server(expressServer);
     
     io.on('connection', async (socket) => {
-        console.log('Se conecto un usuario nuevo')
         socket.emit('server:chat', messages)
     
         socket.emit('server:username', userName)
@@ -64,7 +63,6 @@ function chat(expressServer) {
             });
         } catch(e) {
             logger.error(`timestamp: ${Date.now()} - Read error - ${e}`);
-            console.log('error al leer mensajes historicos: ',e) 
         }
     })();
     }
