@@ -102,10 +102,15 @@ class ContenedorMongodb {
 
     async newCart(objetoCart) {
         try {
-            const doc = await this.coleccion.create(objetoCart)
-            return {'result': {'id': doc._id}, 'http_res':201}
+            const idCartExistente = await this.coleccion.findOne({ username_cart: objetoCart.username_cart }, { __v: 0 })
+                return {'result': {'id': idCartExistente._id}, 'http_res':201}
         } catch (error) {
-            return {'result': {error: 'Error de escritura en db'},'http_res':404}
+            try {
+                const doc = await this.coleccion.create(objetoCart)
+                return {'result': {'id': doc._id}, 'http_res':201}
+            } catch (error) {
+                return {'result': {error: 'Error de escritura en db'},'http_res':404}
+            }
         }
     }
 

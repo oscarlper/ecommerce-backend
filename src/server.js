@@ -11,7 +11,6 @@ logger.verbose('timestamp: '+Date.now()+' - Server listening on port '+ PORT ))
 
 import chat from './controllers/chat.js'
 chat(expressServer);
-// FIN CHAT
 
 import sendNodeEmail from './controllers/nodemailer.js'
 

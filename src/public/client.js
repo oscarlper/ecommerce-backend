@@ -62,8 +62,10 @@ async function renderCart(apiDataCart) {
     })
 }
 
-//getProducts()
-//getCart()
+function insertText(obj) 
+{
+    document.getElementById('targetMsgInput').value = obj.innerText;
+}
 
 //CHAT
 
@@ -72,18 +74,25 @@ const socket = io()
 function renderChat(messageInput) {
     try {
         const html = messageInput.map(messageValue => {
+            if (messageValue.targetMsg == idInput.value) { 
+                colorText='text-danger' 
+            } else { 
+                colorText = 'text-success' 
+            }
             if ((document.getElementById('myMsgInput').value) == "Solo mis mensajes") {
                 if (messageValue.author.id == idInput.value || messageValue.targetMsg == idInput.value) {
                     return(`<div>
                     <div><span class=text-primary style='font-size:0.65rem; font-weight: bold'>${messageValue.author.timestamp} - 
-                    <span style='font-size:0.75rem; color: brown;font-weight: normal'>${messageValue.author.id}: </span></span>
-                    <em class="text-success text-wrap" style="width: 24rem;">${messageValue.text}</em>`)
+                    <span style='font-size:0.75rem; color: brown;font-weight: normal'><a id="melding" onclick="insertText(this)" href="javascript:void;">${messageValue.author.id}</a>: </span></span>
+                    <em class="${colorText} text-wrap" style="width: 24rem;">${messageValue.text}</em>
+                    `)
                 } 
             } else {       
                     return(`<div>
                     <div><span class=text-primary style='font-size:0.65rem; font-weight: bold'>${messageValue.author.timestamp} - 
-                    <span style='font-size:0.75rem; color: brown;font-weight: normal'>${messageValue.author.id}: </span></span>
-                    <em class="text-success text-wrap" style="width: 24rem;">${messageValue.text}</em>`)
+                    <span style='font-size:0.75rem; color: brown;font-weight: normal'><a id="melding" onclick="insertText(this)" href="javascript:void;">${messageValue.author.id}</a>: </span></span>
+                    <em class="${colorText} text-wrap" style="width: 24rem;">${messageValue.text}</em>
+                    `)
             }
         }).join(" ");
         areaChat.innerHTML = html
@@ -108,13 +117,11 @@ function submitMessage() {
         const id = idInput.value
         const nombre = nombreInput.value
         const apellido = apellidoInput.value
-        const edad = edadInput.value
         const alias = aliasInput.value
-        const avatar = avatarInput.value
         const targetMsg = targetMsgInput.value
         const message = messageInput.value
 
-        socket.emit('server:chat', {dateMark,id,nombre,apellido,edad,alias,avatar,targetMsg,message})
+        socket.emit('server:chat', {dateMark,id,nombre,apellido,alias,targetMsg,message})
     } catch(error) {
         console.log(`Hubo un error ${error}`)
     }

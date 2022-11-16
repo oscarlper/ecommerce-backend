@@ -75,19 +75,16 @@
                 <h3 class="text-primary">Centro de Mensajes</h3>
                 <div id="areaChat" style="min-height:400px; max-height:400px;  background:lightgrey; overflow-wrap: break-word; overflow-y:scroll"></div>
                 <form id="formMessage">
-                    <label>Usuario:<br><input type='id' name='idInput' id='idInput' value='<%= usuario %>' disabled=true>
+                    <em>Click sobre el email para responder a una persona o click <a id="melding" onclick="insertText(this)" href="javascript:void;">Aqui</a> para responder a todos.</em><br><br>
+                    <label>Usuario: <input type='id' name='idInput' id='idInput' value='<%= usuario %>' disabled=true>
                     </label><br>
                     <label>Nombre: <input type='nombre' name='nombreInput' id='nombreInput' value='<%= nombre %>' disabled=true>
                     </label><br>
                     <label>Apellido: <input type='apellido' name='apellidoInput' id='apellidoInput' value='<%= apellido %>' disabled=true>
                     </label><br>
-                    <label>Edad: <input type='edad' name='edadInput' id='edadInput' placeholder="edad">
-                    </label><br>
                     <label>Alias: <input type='alias' name='aliasInput' id='aliasInput' value='<%= nombre %>_<%= apellido %>'>
                     </label><br>
-                    <label>Avatar: <input type='avatar' name='avatarInput' id='avatarInput' placeholder="Seleccione su avatar">
-                    </label><br>
-                    <label>Destinatario: <input type='targetMsg' name='targetMsgInput' id='targetMsgInput' value='Todos'>
+                    <label>Responder a: <input type='targetMsg' name='targetMsgInput' id='targetMsgInput' value='Todos' disabled=true>
                     </label><br>
                     <label>Mensajes: <select type='myMsgs' name='myMsgInput' id='myMsgInput' value='Todos'>
                                         <option>Chat general</option>

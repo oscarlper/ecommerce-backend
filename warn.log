@@ -1425,3 +1425,72 @@
 {"level":"warn","message":"timestamp: 1668527708732 - url: /socket.io/?EIO=4&transport=polling&t=OHy05e7 method: GET - Not found"}
 {"level":"warn","message":"timestamp: 1668527714840 - url: /socket.io/?EIO=4&transport=polling&t=OHy077b method: GET - Not found"}
 {"level":"warn","message":"timestamp: 1668527831207 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1668528807411 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1668529181898 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1668529200033 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1668529207517 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1668529251416 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1668529278692 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1668529375214 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1668529429397 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1668529571398 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1668529619095 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1668529709141 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1668529771895 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1668529856834 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1668529995629 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1668530325098 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1668530527673 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1668531487757 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1668551231212 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1668551779187 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1668551945968 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1668551992638 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1668552012568 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1668552049396 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1668552087312 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1668552156658 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1668552282436 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1668552312785 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1668552424167 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1668552444573 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1668552589547 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1668552657345 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1668552730233 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1668552732532 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1668552853770 - url: /api/producto method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1668553526779 - url: / - method: POST - User no logueado"}
+{"level":"warn","message":"timestamp: 1668553581286 - url: / - method: POST - User no logueado"}
+{"level":"warn","message":"timestamp: 1668553627105 - url: / - method: POST - User no logueado"}
+{"level":"warn","message":"timestamp: 1668554524781 - url: / - method: POST - User no logueado"}
+{"level":"warn","message":"timestamp: 1668554761068 - url: / - method: POST - User no logueado"}
+{"level":"warn","message":"timestamp: 1668554915097 - url: / - method: POST - User no logueado"}
+{"level":"warn","message":"timestamp: 1668554987927 - url: / - method: POST - User no logueado"}
+{"level":"warn","message":"timestamp: 1668555019906 - url: / - method: POST - User no logueado"}
+{"level":"warn","message":"timestamp: 1668555022295 - url: / - method: POST - User no logueado"}
+{"level":"warn","message":"timestamp: 1668555299670 - url: / - method: POST - User no logueado"}
+{"level":"warn","message":"timestamp: 1668555373009 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1668555505524 - url: /api/carrito/63742235bb54f8ef551c178d method: POST - Not found"}
+{"level":"warn","message":"timestamp: 1668555507519 - url: /api/carrito/63742235bb54f8ef551c178d method: POST - Not found"}
+{"level":"warn","message":"timestamp: 1668555582188 - url: /api/carrito/6374232d12914c9058d5d08b method: POST - Not found"}
+{"level":"warn","message":"timestamp: 1668555607953 - url: /6374232d12914c9058d5d08b - method: POST - User no logueado"}
+{"level":"warn","message":"timestamp: 1668556633979 - url: /6374232d12914c9058d5d08b/productos - method: POST - User no logueado"}
+{"level":"warn","message":"timestamp: 1668558414968 - url: /6374232d12914c9058d5d08b/productos - method: POST - User no logueado"}
+{"level":"warn","message":"timestamp: 1668558509792 - url: /6374232d12914c9058d5d08b/productos - method: POST - User no logueado"}
+{"level":"warn","message":"timestamp: 1668558556504 - url: /6374232d12914c9058d5d08b/productos - method: POST - User no logueado"}
+{"level":"warn","message":"timestamp: 1668558997864 - url: /6374232d12914c9058d5d08b/productos - method: POST - User no logueado"}
+{"level":"warn","message":"timestamp: 1668561553078 - url: /6374232d12914c9058d5d08b/productos - method: POST - User no logueado"}
+{"level":"warn","message":"timestamp: 1668561713229 - url: /6374232d12914c9058d5d08b/productos - method: POST - User no logueado"}
+{"level":"warn","message":"timestamp: 1668561749076 - url: /6374232d12914c9058d5d08b/productos - method: POST - User no logueado"}
+{"level":"warn","message":"timestamp: 1668562001604 - url: /6374232d12914c9058d5d08b/productos - method: POST - User no logueado"}
+{"level":"warn","message":"timestamp: 1668562305316 - url: /6374232d12914c9058d5d08b/productos - method: POST - User no logueado"}
+{"level":"warn","message":"timestamp: 1668563054469 - url: /6374232d12914c9058d5d08b/productos - method: POST - User no logueado"}
+{"level":"warn","message":"timestamp: 1668563057801 - url: /6374232d12914c9058d5d08b/productos - method: POST - User no logueado"}
+{"level":"warn","message":"timestamp: 1668563059458 - url: /6374232d12914c9058d5d08b/productos - method: POST - User no logueado"}
+{"level":"warn","message":"timestamp: 1668564252943 - url: /6374232d12914c9058d5d08b/productos - method: POST - User no logueado"}
+{"level":"warn","message":"timestamp: 1668564384372 - url: / - method: POST - User no logueado"}
+{"level":"warn","message":"timestamp: 1668564632001 - url: /6374232d12914c9058d5d08b/productos - method: POST - User no logueado"}
+{"level":"warn","message":"timestamp: 1668564969164 - url: /6374232d12914c9058d5d08b/productos - method: POST - User no logueado"}
+{"level":"warn","message":"timestamp: 1668564970461 - url: /6374232d12914c9058d5d08b/productos - method: POST - User no logueado"}
+{"level":"warn","message":"timestamp: 1668565044330 - url: /6374232d12914c9058d5d08b/productos - method: POST - User no logueado"}
+{"level":"warn","message":"timestamp: 1668565045874 - url: /6374232d12914c9058d5d08b/productos - method: POST - User no logueado"}

@@ -59,14 +59,12 @@ cartRouter.get("/:id", async (req, res) => {
 });
 
 
-//cartRouter.post('/',userAuth , async (req,res) => {
 cartRouter.post('/', async (req,res) => {
 
     const { id_prod, stock, cant } = req.body
     const timestamp_cart = Date.now()
     const timestamp_prod = Date.now()
-    const username_cart = req.user.email
-    
+    const username_cart = req.body.username_cart
     const response = await CarritoDao.newCart({username_cart,timestamp_cart,products:[{timestamp_prod,id_prod,stock,cant}]})
 
     res.status(response.http_res).json(response.result)
