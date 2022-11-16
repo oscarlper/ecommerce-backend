@@ -47,7 +47,7 @@
         </div>
         <% if (level === 'Administrator') { %>
             <div class="row justify-content-center">
-                <div class="col col-sm-6"><br>
+                <div class="col col-sm-8"><br>
                     <h3 class="text-primary">Environment Section (only admins)</h3>
                     <div id="areaProfile" style=" min-height:320px; max-height:320px; background:lightgrey; padding-top:20px; padding-left: 20px">
                             <div class="col col-sm-6">
@@ -71,11 +71,11 @@
             
 
         <div class="row justify-content-center">
-            <div class="col col-sm-6"><br><br>
+            <div class="col col-sm-8"><br><br>
                 <h3 class="text-primary">Centro de Mensajes</h3>
                 <div id="areaChat" style="min-height:400px; max-height:400px;  background:lightgrey; overflow-wrap: break-word; overflow-y:scroll"></div>
                 <form id="formMessage">
-                    <em>Click sobre el email para responder a una persona o click <a id="melding" onclick="insertText(this)" href="javascript:void;">Aqui</a> para responder a todos.</em><br><br>
+                    <em>Click sobre el email para responder a una persona o chat general click en <a id="melding" onclick="insertText(this)" href="javascript:void;">Todos</a></em><br><br>
                     <label>Usuario: <input type='id' name='idInput' id='idInput' value='<%= usuario %>' disabled=true>
                     </label><br>
                     <label>Nombre: <input type='nombre' name='nombreInput' id='nombreInput' value='<%= nombre %>' disabled=true>

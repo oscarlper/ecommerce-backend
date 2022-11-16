@@ -1521,3 +1521,4 @@
 {"level":"warn","message":"timestamp: 1668626409794 - url: /cat4/category - method: GET - User no logueado"}
 {"level":"warn","message":"timestamp: 1668627052740 - url: / - method: POST - User no logueado"}
 {"level":"warn","message":"timestamp: 1668627311669 - url: /63753ad7e809ce0e6dbda75c - method: PUT - User no logueado"}
+{"level":"warn","message":"timestamp: 1668627953469 - url: /login - method: GET - User no logueado"}
