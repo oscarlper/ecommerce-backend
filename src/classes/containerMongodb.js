@@ -21,6 +21,21 @@ class ContenedorMongodb {
         }
     }
 
+    async listarByCat(cat) {
+        console.log('listarbycat')
+        console.log(cat)
+        try {
+            if ((await this.coleccion.find({ category: cat }, { __v: 0 })).length > 0) {
+                const doc = await this.coleccion.find({ category:cat });
+                return {'result': doc,'http_res':201 };
+            } else {
+                return {'result': {error: 'id no encontrado'},'http_res':404}
+            }
+        } catch (error) {
+            return {'result': {error: 'Error en db'},'http_res':404}
+        }
+    }
+
     async listarByUsername(username) {
         try {
             if ((await this.coleccion.find({ username_cart: username }, { __v: 0 })).length > 0) {
@@ -44,7 +59,6 @@ class ContenedorMongodb {
     }
 
     async newProd(objetoProd) {
-        console.log(objetoProd)
         try {
             const doc = await this.coleccion.create(objetoProd)
             return {'result': {'id': doc._id}, 'http_res':201}
@@ -84,23 +98,6 @@ class ContenedorMongodb {
             return {'result': {error: 'Error en db'},'http_res':404}
         }
     }
-
-/*
-    async addProdCart(id,data) {
-        try {
-            if ((await this.coleccion.find({ _id: id }, { __v: 0 })).length > 0) {
-                console.log('voy a agregar esto',id,data)
-                const result = await this.coleccion.updateOne({_id: id},{$push: {products: data}});
-                console.log(result)
-                return await this.listar(id)
-            } else {
-                return {'result': {error: 'id no encontrado'},'http_res':404}
-            }
-        } catch (error) {
-            return {'result': {error: 'Error en db'},'http_res':404}
-        }
-    }
-*/
 
     async addProdCart(id,data) {
         try {

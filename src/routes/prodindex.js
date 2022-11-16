@@ -28,6 +28,13 @@ prodRouter.get("/:id", async (req, res) => {
     res.status(response.http_res).json(response.result)
 });
 
+prodRouter.get("/:cat/category", async (req, res) => {
+    console.log('route listarbycat')
+    const cat = req.params.cat
+    const response = await productoDao.listarByCat(cat);
+    res.status(response.http_res).json(response.result)
+});
+
 prodRouter.post('/', userAuth.isAdmin, async (req,res) => {
 
     const { title, price, code, thumbnail, stock } = req.body

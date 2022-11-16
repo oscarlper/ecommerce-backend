@@ -1509,3 +1509,13 @@
 {"level":"warn","message":"timestamp: 1668611533730 - url: /6374232d12914c9058d5d08b/productos - method: POST - User no logueado"}
 {"level":"warn","message":"timestamp: 1668611666332 - url: /6374232d12914c9058d5d08b/productos - method: POST - User no logueado"}
 {"level":"warn","message":"timestamp: 1668611796051 - url: /6374232d12914c9058d5d08b/productos - method: POST - User no logueado"}
+{"level":"warn","message":"timestamp: 1668612003076 - url: /6374232d12914c9058d5d08b/productos - method: POST - User no logueado"}
+{"level":"warn","message":"timestamp: 1668612030589 - url: /6374232d12914c9058d5d08b/productos - method: POST - User no logueado"}
+{"level":"warn","message":"timestamp: 1668625052016 - url: /cat1/category method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1668625075714 - url: /cat1/category - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1668625654002 - url: /api/productos/cat2/category method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1668625763095 - url: /api/productos/cat2/categoria method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1668625821540 - url: /633b6b2a06ecd05b847e75b6/category - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1668625824675 - url: /633b6b2a06ecd05b847e75b6/category - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1668626259346 - url: /cat3/category - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1668626409794 - url: /cat4/category - method: GET - User no logueado"}

@@ -9,6 +9,7 @@ class ProductoDaoMongodb extends ContenedorMongodb {
       thumbnail: { type: String, required: true },
       stock: { type: Number, required: true },
       price: { type: Number, required: true },
+      category: { type: String, required: true},
     });
   }
 }
