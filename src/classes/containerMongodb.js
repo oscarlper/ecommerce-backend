@@ -152,6 +152,7 @@ class ContenedorMongodb {
                 data.price == null || data.price == undefined? dataToUpdate.price = doc[0].price : dataToUpdate.price = data.price
                 data.thumbnail == null || data.thumbnail == undefined? dataToUpdate.thumbnail = doc[0].thumbnail : dataToUpdate.thumbnail = data.thumbnail
                 data.stock == null || data.stock == undefined ? dataToUpdate.stock = doc[0].stock : dataToUpdate.stock = data.stock
+                data.category == null || data.category == undefined ? dataToUpdate.category = doc[0].category : dataToUpdate.category = data.category
                 try {
                     console.log(dataToUpdate)
                     const doc = await this.coleccion.updateOne({ _id: id }, dataToUpdate);

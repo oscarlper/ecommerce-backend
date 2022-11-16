@@ -37,10 +37,10 @@ prodRouter.get("/:cat/category", async (req, res) => {
 
 prodRouter.post('/', userAuth.isAdmin, async (req,res) => {
 
-    const { title, price, code, thumbnail, stock } = req.body
+    const { title, price, code, thumbnail, stock, category } = req.body
     const timestamp = Date.now()
 
-    const response = await productoDao.newProd({timestamp,title,code,thumbnail,price,stock})
+    const response = await productoDao.newProd({timestamp,title,code,thumbnail,price,stock,category})
 
     res.status(response.http_res).json(response.result)
 })
@@ -60,6 +60,7 @@ prodRouter.put('/:id', userAuth.isAdmin, async (req,res) => {
     const thumbnail = req.body.thumbnail
     const price = req.body.price
     const stock = req.body.stock
+    const category = req.body.category
 
     let data = {"title": title,
                 "code": code,
