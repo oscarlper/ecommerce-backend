@@ -38,8 +38,8 @@ cartRouter.get("/checkout", async (req, res) => {
     try {
         const response = await CarritoDao.listarByUsername(username);
         await sendEmailCart(response,username,fullname)
-        await sendSMS(telephone)
-        await sendWhatsapp(username, fullname)
+        //await sendSMS(telephone)
+        //await sendWhatsapp(username, fullname)
         res.sendFile(path.join(__dirname + "/../public/checkout.html"));
     } catch(err) {
         console.log(err)
