@@ -1522,3 +1522,12 @@
 {"level":"warn","message":"timestamp: 1668627052740 - url: / - method: POST - User no logueado"}
 {"level":"warn","message":"timestamp: 1668627311669 - url: /63753ad7e809ce0e6dbda75c - method: PUT - User no logueado"}
 {"level":"warn","message":"timestamp: 1668627953469 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1668628468691 - url: /checkout method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1668628485048 - url: /checkout - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1668628594531 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1668628867405 - url: /checkout?username=tito20@gmail.com&fullname=Oscar%20Pereyra&telephone=+5491156391497 - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1668628975055 - url: /checkout - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1668629089089 - url: /checkout - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1668629091747 - url: /checkout - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1668629106873 - url: /checkout - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1668629522000 - url: /checkout - method: GET - User no logueado"}

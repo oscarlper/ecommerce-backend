@@ -3,6 +3,8 @@ import { Router } from 'express'
 import dotenv from "dotenv";
 dotenv.config();
 
+import logger from '../controllers/logger.js'
+
 import path from 'path'
 import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
@@ -33,11 +35,16 @@ cartRouter.get("/checkout", async (req, res) => {
     const username = req.user.email
     const fullname = req.user.firstName+' '+req.user.lastName
     const telephone = req.user.telephone
-    const response = await CarritoDao.listarByUsername(username);
-    await sendEmailCart(response,username,fullname)
-    await sendSMS(telephone)
-    await sendWhatsapp(username, fullname)
-    res.sendFile(path.join(__dirname + "/../public/checkout.html"));
+    try {
+        const response = await CarritoDao.listarByUsername(username);
+        await sendEmailCart(response,username,fullname)
+        await sendSMS(telephone)
+        await sendWhatsapp(username, fullname)
+        res.sendFile(path.join(__dirname + "/../public/checkout.html"));
+    } catch(err) {
+        console.log(err)
+        res.status(400).json({Error: err})
+    }
 });
 
 cartRouter.get("/", async (req, res) => {
