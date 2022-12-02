@@ -1,5 +1,5 @@
 import path from 'path'
-import logger from './logger.js'
+import logger from '../libs/logger.js'
 import dotenv from 'dotenv'
 import os from 'os'
 

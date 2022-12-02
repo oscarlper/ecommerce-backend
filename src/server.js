@@ -9,16 +9,14 @@ const PORT = process.env.PORT
 const expressServer = app.listen(PORT, '0.0.0.0', () =>
 logger.verbose('timestamp: '+Date.now()+' - Server listening on port '+ PORT ))
 
-import chat from './controllers/chat.js'
+import chat from './controllers/chat.controller.js'
 chat(expressServer);
-
-import sendNodeEmail from './controllers/nodemailer.js'
 
 import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-import logger from './controllers/logger.js'
+import logger from './libs/logger.js'
 
 const SESSION_SECRET=process.env.SESSION_SECRET
 
@@ -44,14 +42,12 @@ app.set("view engine", ".ejs");
 
 import session from 'express-session' 
 
-import bcrypt from 'bcrypt'
 import passport from 'passport'
-import LocalStrategy from 'passport-local'
 import config from './config.js'
 
 import prodRouter from './routes/prodindex.js'
 import cartRouter from './routes/cartindex.js'
-import userAuth from './controllers/main.js'
+import userAuth from './controllers/auth.controller.js'
 
 import User from './models/userModel.js'
 
@@ -76,74 +72,13 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-function hashPassword(password) {
-    return bcrypt.hashSync(password, bcrypt.genSaltSync(10));
-}
-
-function isValidPassword(reqPassword, hashedPassword) {
-    return bcrypt.compareSync(reqPassword, hashedPassword);
-}
-
-const signupStrategy = new LocalStrategy(
-    { passReqToCallback: true },
-    async (req, email, password, done) => {
-    try {
-        const existingUser = await User.findOne({ email });
-
-        if (existingUser || password != password2 ) {
-        userAuth.getFailsignup
-        logger.error(`timestamp: ${Date.now()} - Username: ${email} - Fail Signup`);
-        return done(null, false);
-        }
-        const newUser = {
-            email: email,
-            password: hashPassword(password),
-            firstName: req.body.firstName,
-            lastName: req.body.lastName,
-            telephone: req.body.telephone,
-            isAdmin: false,
-            userPic: req.file.filename,
-            };
-
-        // codigo to send
-        const subjectMail = 'New Account Created'
-        const dataMail = `username: ${email}<br>
-                        firstName: ${req.body.firstName}<br>
-                        lastName: ${req.body.lastName}<br>
-                        telephone: ${req.body.telephone}<br>
-                        `
-
-        mailOptions.subject = `CH - Notification: ${subjectMail}`
-        mailOptions.html = `<h1 style="color: blue;">Notificacion: <span style="color: green;">${subjectMail}<br>${dataMail}</span></h1>`
-        sendNodeEmail(mailOptions)
-
-
-        const createdUser = await User.create(newUser);
-
-        return done(null, createdUser);
-    } catch (error) {
-        logger.verbose(`timestamp: ${Date.now()} - ${error}`);
-        done(error);
-    }
-    }
-);
-
-const loginStrategy = new LocalStrategy(async (email, password, done) => {
-    const user = await User.findOne({ email });
-    if (user && isValidPassword(password, user.password)) {
-        return done(null, user);
-    } else {
-        userAuth.getFaillogin
-        logger.error(`timestamp: ${Date.now()} - email: ${email} - Fail Login`);
-        return done(null, null)
-    }
-});
+import libPassport from './libs/passport.js'
 
 app.use(express.static(`${__dirname}/public`));
 app.use(express.json());
 
-passport.use("register", signupStrategy);
-passport.use("login", loginStrategy);
+passport.use("register", libPassport.signupStrategy);
+passport.use("login", libPassport.loginStrategy);
 
 passport.serializeUser((user, done) => {
     done(null, user._id);
@@ -182,13 +117,9 @@ app.get("/api/logout", async (req, res) => {
     res.json({ error: true, message: err });
     }
 });
-// userAuth.isAdmin (para verificar booleano isAdmin en user@mongodb)
-// todas la funcionalidades de api requiere autenticacion y el filtrado 
-// por admin se realiza en routes/prodindex y cartindex
 
 app.use('/api/productos', userAuth.apiLogin, prodRouter)
 app.use('/api/carrito', userAuth.apiLogin, cartRouter)
-
 
 app.use((req,res) => {
     const { url, method } = req;

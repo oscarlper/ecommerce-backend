@@ -53,3 +53,5 @@
 {"level":"error","message":"timestamp: 1668465986584 - Username: p@p.p - Fail Signup"}
 {"level":"error","message":"timestamp: 1668466064445 - Username: test00@gmail.com - Fail Signup"}
 {"level":"error","message":"timestamp: 1668567099592 - email: ramon90cito@gmail.com - Fail Login"}
+{"level":"error","message":"timestamp: 1670017829340 - email: ramon90cito@gmail.com - Fail Login"}
+{"level":"error","message":"timestamp: 1670017835885 - email: ramon90cito@gmail.com - Fail Login"}

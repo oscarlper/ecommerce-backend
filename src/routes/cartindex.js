@@ -3,7 +3,7 @@ import { Router } from 'express'
 import dotenv from "dotenv";
 dotenv.config();
 
-import logger from '../controllers/logger.js'
+import logger from '../libs/logger.js'
 
 import path from 'path'
 import { fileURLToPath } from 'url';
@@ -14,7 +14,7 @@ const cartRouter = Router()
 
 import daos from "../daos/index.js";
 
-import sendNodeEmail from '../controllers/nodemailer.js'
+import sendNodeEmail from '../libs/nodemailer.js'
 
 const mailOptions = {
     from: 'Servidor Node.js',
@@ -30,22 +30,6 @@ let id;
 let id_prod;
 
 const CarritoDao = new daos.CarritoDao
-
-cartRouter.get("/checkout", async (req, res) => {
-    const username = req.user.email
-    const fullname = req.user.firstName+' '+req.user.lastName
-    const telephone = req.user.telephone
-    try {
-        const response = await CarritoDao.listarByUsername(username);
-        await sendEmailCart(response,username,fullname)
-        //await sendSMS(telephone)
-        //await sendWhatsapp(username, fullname)
-        res.sendFile(path.join(__dirname + "/../public/checkout.html"));
-    } catch(err) {
-        console.log(err)
-        res.status(400).json({Error: err})
-    }
-});
 
 cartRouter.get("/", async (req, res) => {
     const response = await CarritoDao.listarAll()
@@ -114,34 +98,18 @@ async function sendEmailCart(response,username,fullname) {
     sendNodeEmail(mailOptions)
 }
 
-async function sendSMS(phonenumber){
+cartRouter.get("/checkout", async (req, res) => {
+    const username = req.user.email
+    const fullname = req.user.firstName+' '+req.user.lastName
+    const telephone = req.user.telephone
     try {
-    const message = await client.messages.create({
-        body: `Su pedido ya fue registrado y se encuentra en proceso>`,
-        from: '+19288578634',
-        to: '+5491156391497'
-        }) 
-        logger.verbose(`timestamp: ${Date.now()} - ${message}`);
-    } catch(error) {
-        logger.verbose(`timestamp: ${Date.now()} - ${error}`);
+        const response = await CarritoDao.listarByUsername(username);
+        await sendEmailCart(response,username,fullname)
+        res.sendFile(path.join(__dirname + "/../public/checkout.html"));
+    } catch(err) {
+        console.log(err)
+        res.status(400).json({Error: err})
     }
-}
-
-async function sendWhatsapp(username, fullname) {
-    const options = {
-        body: `Nuevo pedido de ${fullname} - ${username}`,
-        from: "whatsapp:+14155238886",
-        to: "whatsapp:+5491156391497",
-    };
-    
-    try {
-        const message = await client.messages.create(options);
-    
-        logger.verbose(`timestamp: ${Date.now()} - ${message}`);
-    } catch (error) {
-        logger.verbose(`timestamp: ${Date.now()} - ${error}`);
-    }
-}
-
+});
 
 export default cartRouter;

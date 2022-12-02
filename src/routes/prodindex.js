@@ -4,9 +4,9 @@ const prodRouter = Router()
 
 import daos from "../daos/index.js";
 
-import userAuth from '../controllers/main.js'
+import userAuth from '../controllers/auth.controller.js'
 
-import logger from '../controllers/logger.js'
+import logger from '../libs/logger.js'
 
 let id;
 

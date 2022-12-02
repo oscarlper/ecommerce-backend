@@ -1531,3 +1531,27 @@
 {"level":"warn","message":"timestamp: 1668629091747 - url: /checkout - method: GET - User no logueado"}
 {"level":"warn","message":"timestamp: 1668629106873 - url: /checkout - method: GET - User no logueado"}
 {"level":"warn","message":"timestamp: 1668629522000 - url: /checkout - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1670014397371 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1670015813044 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1670016722123 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1670016876353 - url: /api/carrito method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1670016916624 - url: /api/carrito method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1670016951994 - url: /api method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1670016959779 - url: /api/carrito method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1670017014522 - url: /api/producto method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1670017022008 - url: /api/carrito method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1670017024613 - url: /api/carritos method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1670017148123 - url: /api/carritos method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1670017254484 - url: /api/carritos method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1670017513975 - url: /api/carritos method: GET - Not found"}
+{"level":"warn","message":"timestamp: 1670017825665 - url: /login - method: GET - User no logueado"}
+{"level":"error","message":"timestamp: 1670017829340 - email: ramon90cito@gmail.com - Fail Login"}
+{"level":"warn","message":"timestamp: 1670017830942 - url: /login - method: GET - User no logueado"}
+{"level":"error","message":"timestamp: 1670017835885 - email: ramon90cito@gmail.com - Fail Login"}
+{"level":"warn","message":"timestamp: 1670017842161 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1670017851935 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1670017867632 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1670017870563 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1670018671438 - url: /login - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1670018676514 - url: / - method: GET - User no logueado"}
+{"level":"warn","message":"timestamp: 1670018826823 - url: / - method: GET - User no logueado"}
